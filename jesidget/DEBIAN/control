@@ -1,0 +1,9 @@
+Package: com.scottlearn.jesidget
+Name: Jesidget
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Merry Christmas, Ga!
+Maintainer: cscott <8th.realm@gmail.com>
+Author: cscott
+Section: Tweak
+Depends: com.eldwin.iwidgets

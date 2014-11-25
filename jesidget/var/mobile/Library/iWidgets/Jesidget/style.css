@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  box-sizing:border-box; 
+}
+
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url('Gloria.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'checks';
+  src: url('checks.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { 
+ margin:0px; 
+}
+
+textarea  { 
+  display: block;
+  padding:10px;
+  margin:0;
+  width:150px;
+  height:150px;   
+  font:12px 'Gloria Hallelujah', cursive; 
+  line-height:1.5;
+  border:0;
+  border-radius:3px;
+  background: linear-gradient(#F9EFAF, #F7E98D);
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  transition:box-shadow 0.5s ease;
+  font-smoothing:subpixel-antialiased;
+  max-width:250px;
+  max-height:250px;
+  z-index: 999;
+}
+
+textarea:hover { box-shadow:0 5px 8px rgba(0,0,0,0.15); }
+textarea:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
+
+.check {
+  font-family: "checks";
+  position: absolute;
+  top: 5px;
+  left: 130px;
+  opacity: 0.75;
+  z-index: 1;
+}
+
+#check-done {
+  display: none;
+}
+
+#check-done:before {
+  content: '\e801';
+}
+
+#check-not_done {
+  color: #AEAEAE;
+}
+
+#check-not_done:before {
+  content: '\e800';
+}
+
+#main {
+  
+}
+
+#name {
+  font: 10px "Times";
+  font-style: italic;
+  text-decoration: underline;
+  position: absolute;
+}
