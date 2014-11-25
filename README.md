@@ -7,6 +7,9 @@ Description
 ------------
 Jesidget is a 150x150px sticky note widget of variable color (configurable on creation) with a completion indicator in the top right corner. It is scrollable, and uses HTML5 local storage for persistence.
 
+Building and Installing
+-----------------------
+Since iWidgets are just HTML/Javascript, there really isn't any building to be done. I have created a makefile just so I wouldn't have to remember the commands. Running `make` creates a cydia-compatable .deb file and `make install` runs `dpkg` to install it.
 
 Caveats and Oddities
 --------------------
