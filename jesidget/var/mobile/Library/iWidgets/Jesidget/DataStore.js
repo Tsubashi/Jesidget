@@ -8,6 +8,9 @@ $( document ).ready(function() {
     if ("noteID" in window && noteID != "None") {
       $("#myText").val(localStorage.getItem(noteID));
       $("#name").html(noteID);
+      // Yes, this could possibly collide with the user-defined title of another note, but honestly
+      // I think the chances of this specific title being chosen are pretty slim. You would have to be 
+      // trying.
       if (localStorage.getItem(noteID+"-NOT_A_TITLE-ITICOY") == "yes") { // Is The Item Checked Off Yet?
         $('#check-not_done').fadeOut();
         $('#check-done').fadeIn();
@@ -17,6 +20,7 @@ $( document ).ready(function() {
       $("#name").html("Temporary Note");
     }
   } else {
+    // It will be a strange day when this is hit.
     $("#myText").val("Sorry, your browser does not support Web Storage...");
   }  
   
@@ -39,7 +43,7 @@ $( document ).ready(function() {
       case 5: //Teal
         $('#myText').css("background","linear-gradient(#aff9ef, #8df7e9)");
       break;
-      default:
+      default: //Yellow
         $('#myText').css("background","linear-gradient(#F9EFAF, #F7E98D)");
       break;
     }
@@ -71,10 +75,3 @@ $( document ).ready(function() {
   });
   
 });
-
-
-
-
-//setInterval(function() {
-//  alert("Left: "+$("#myText").position().left()+" Top: "+ $("#myText").position().top());
-//}, 1000);
